@@ -30,6 +30,11 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     private RedisCache redisCache;
 
 
+    /**
+     * @Author: Li
+     * @Description: 每一次请求都会验证，获取token，解析，通过userId从redis中获取用户信息
+     * @DateTime: 2022/4/29 18:55
+     */
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
         //获取token
@@ -58,10 +63,13 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
             throw new RuntimeException("用户未登陆");
         }
 
+
         //存入SecurityContextHolder
         //TODO 获取权限信息，封装到Authentication
-        UsernamePasswordAuthenticationToken authenticationToken= new UsernamePasswordAuthenticationToken(loginUser, null,null);
+        UsernamePasswordAuthenticationToken authenticationToken= new UsernamePasswordAuthenticationToken(loginUser, null,loginUser.getAuthorities());
         SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+
+
 
         //放行
         filterChain.doFilter(httpServletRequest, httpServletResponse);

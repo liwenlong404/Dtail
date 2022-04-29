@@ -1,7 +1,11 @@
 package com.li.domain;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-
+/**
+ * @Description:
+ * @author li
+ * @create 2022/4/29 21:45
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResponseResult<T> {
     /**
