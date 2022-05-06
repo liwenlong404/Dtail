@@ -37,7 +37,8 @@ public class Code03_InsertionSort {
 		// Math.random() -> [0,1) 所有的小数，等概率返回一个
 		// Math.random() * N -> [0,N) 所有小数，等概率返回一个
 		// (int)(Math.random() * N) -> [0,N-1] 所有的整数，等概率返回一个
-		int[] arr = new int[(int) ((maxSize + 1) * Math.random())]; // 长度随机
+		// 长度随机
+		int[] arr = new int[(int) ((maxSize + 1) * Math.random())];
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = (int) ((maxValue + 1) * Math.random()) - (int) (maxValue * Math.random());
 		}
@@ -89,8 +90,10 @@ public class Code03_InsertionSort {
 	// for test
 	public static void main(String[] args) {
 		int testTime = 500000;
-		int maxSize = 100; // 随机数组的长度0～100
-		int maxValue = 100;// 值：-100～100
+		// 随机数组的长度0～100
+		int maxSize = 100;
+		// 值：-100～100
+		int maxValue = 100;
 		boolean succeed = true;
 		for (int i = 0; i < testTime; i++) {
 			int[] arr = generateRandomArray(maxSize, maxValue);

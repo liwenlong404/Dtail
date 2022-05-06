@@ -380,7 +380,7 @@ public class StreamDemo {
         authors.stream()
                 .map(author -> author.getAge())
                 .map(age->age+10)
-                .forEach(age-> System.out.println(age));
+                .forEach(System.out ::println);
     }
 
     private static void test04() {
@@ -465,5 +465,9 @@ public class StreamDemo {
 
         List<Author> authorList = new ArrayList<>(Arrays.asList(author,author2,author3,author4));
         return authorList;
+    }
+
+    private static void accept(Author author) {
+        System.out.println(author.getName());
     }
 }

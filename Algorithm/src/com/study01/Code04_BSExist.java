@@ -12,7 +12,8 @@ public class Code04_BSExist {
 		int R = sortedArr.length - 1;
 		int mid = 0;
 		// L..R
-		while (L < R) { // L..R 至少两个数的时候
+		// L..R 至少两个数的时候
+		while (L < R) {
 			mid = L + ((R - L) >> 1);
 			if (sortedArr[mid] == num) {
 				return true;
