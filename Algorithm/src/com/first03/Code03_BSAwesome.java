@@ -24,7 +24,6 @@ public class Code03_BSAwesome {
             }
         }
 
-
         System.out.println("测试结束");
     }
 
