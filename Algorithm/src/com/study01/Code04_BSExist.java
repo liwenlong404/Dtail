@@ -1,7 +1,11 @@
 package com.study01;
 
 import java.util.Arrays;
-
+/**
+ * @Description: 二分
+ * @author li
+ * @create 2022/5/16 11:23
+ */
 public class Code04_BSExist {
 
 	public static boolean exist(int[] sortedArr, int num) {

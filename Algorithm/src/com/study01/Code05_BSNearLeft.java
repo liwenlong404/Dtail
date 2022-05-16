@@ -1,7 +1,11 @@
 package com.study01;
 
 import java.util.Arrays;
-
+/**
+ * @Description: 二分 在arr上，找满足>=value的最左位置
+ * @author li
+ * @create 2022/5/16 11:25
+ */
 public class Code05_BSNearLeft {
 
 	// 在arr上，找满足>=value的最左位置

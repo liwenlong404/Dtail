@@ -1,5 +1,9 @@
 package com.study01;
-
+/**
+ * @Description: 二分局部最小
+ * @author li
+ * @create 2022/5/16 11:27
+ */
 public class Code06_BSAwesome {
 
 	// 课上的代码
